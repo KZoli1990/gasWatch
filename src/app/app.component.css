@@ -1,0 +1,67 @@
+.discSytleStart{
+    width: 205%;
+    height: 10px;
+    background: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation-name: measuringDisc;
+    animation-iteration-count: infinite;
+    animation-play-state:start
+}
+.discSytlePaused{
+    width: 205%;
+    height: 10px;
+    background: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation-name: measuringDisc;
+    animation-iteration-count: infinite;
+    animation-play-state:paused
+}
+
+.numColumnStart{
+    width:100%;
+    height:1700px;
+    position: absolute;
+    animation-name: decrease;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state:start
+}
+
+.numColumnPaused{
+    width:100%;
+    height:1700px;
+    position: absolute;
+    animation-name: decrease;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state:paused;
+}
+
+.optionPlay{
+    color:white;
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.optionPaused{
+    color:white;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+
+@keyframes measuringDisc{   
+    0% { right: 0%; }
+    100% {right: -105%;}     
+}
+
+@keyframes decrease{   
+    0% { top: 0; }
+    100% {top: -1700px;}     
+}
